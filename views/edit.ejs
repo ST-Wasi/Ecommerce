@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD NEW PRODUCT</title>
+</head>
+<body>
+    <form action="/product/<%= foundProduct._id %>?_method=PATCH" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" value="<%=foundProduct.name%>" id="name">
+
+        <label for="photo">Image: </label>
+        <input type="text" name="image" value="<%=foundProduct.image%>" id="photo">
+
+        <label for="daam">Price: </label>
+        <input type="text" name="price" value="<%=foundProduct.price%>" id="daam">
+
+        <label for="description">Description: </label>
+        <textarea name="description" id="description"rows="3"><%=foundProduct.description%></textarea>
+
+        <button type="submit">Add product</button>
+    </form>
+</body>
+</html>
